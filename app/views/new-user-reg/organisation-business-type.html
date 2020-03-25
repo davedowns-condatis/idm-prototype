@@ -36,11 +36,20 @@
       form.action = '/new-user-reg/sole-trader/sole-trader-name'
 
       break;
-      case 'UK Company':
-      form.action = '/new-user-reg/company-lookup'
+      case 'Limited company':
+      form.action = '/new-user-reg/new-user-reg/company-lookup'
+
+      break;
+      case 'Public limited company':
+      form.action = '/new-user-reg/new-user-reg/company-lookup'
       break;
 
-      case 'Non-UK organisation':
+      break;
+      case 'Limited liability partnership':
+      form.action = '/new-user-reg/new-user-reg/company-lookup'
+      break;
+
+      case 'Non-UK organisation'
       form.action = '/new-user-reg/non-uk-org/org-name'
       break;
 
@@ -68,8 +77,17 @@
             form.action = '/new-user-reg/sole-trader/task-list-page-account?flowType=task'
 
             break;
-            case 'UK Company':
-            form.action = '/new-user-reg/company-lookup'
+            case 'Limited company':
+            form.action = '/new-user-reg/limited-company/task-list-page-account?flowType=task'
+
+            break;
+            case 'Public limited company':
+            form.action = '/new-user-reg/limited-company/task-list-page-account?flowType=task'
+            break;
+
+            break;
+            case 'Limited liability partnership':
+            form.action = '/new-user-reg/limited-company/task-list-page-account?flowType=task'
             break;
 
             case 'Non-UK organisation':
@@ -108,9 +126,19 @@
 
           },
           {
-            value: "UK Company",
-            text: "LTD, LLP or PLC",
+            value: "Limited company",
+            text: "Limited company",
             checked:  checked('businessType', 'Limited company')
+          },
+          {
+            value: "Public limited company",
+            text: "Public limited company",
+            checked:  checked('businessType','Public limited company')
+          },
+          {
+            value: "Limited liability partnership",
+            text: "Limited liability partnership",
+            checked:  checked('businessType','Limited liability partnership')
           },
           {
             value: "Non-UK organisation",
