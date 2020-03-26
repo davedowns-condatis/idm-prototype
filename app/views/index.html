@@ -319,15 +319,33 @@
 
     <h2 class="govuk-heading-m">In progress</h2>
 
-    <h2 class="govuk-heading-m">IV
+    <h2 class="govuk-heading-m">HMRC IV Integration
     </h2>
-      <p class="govuk-body">Ensure to clear data before and after</p>
-      <h3 class="govuk-heading-s">Signup</h3>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Ensure to <a href="prototype-admin/clear-data"> clear data</a> before and after
+      </strong>
+    </div>
+
+    <h3 class="govuk-heading-s">Full journey (Choose UK Company</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="service-start-logged-out?serviceLine=Comply with REACH IT&serviceRole=REACH Manager&userType=new&regSuccess=success&serviceQuestions=no&numUsers=1&IV=on&IVRes=success" class="govuk-link--no-visited-state">IV Success</a></li>
+      <li><a href="service-start-logged-out?serviceLine=Comply with REACH IT&serviceRole=REACH Manager&userType=new&regSuccess=success&serviceQuestions=no&numUsers=1&IV=on&IVRes=fail" class="govuk-link--no-visited-state">IV Fail</a></li>
+    </ul>
+
+      <h3 class="govuk-heading-s">Start from task list (UK Company example)</h3>
       <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/new-user-reg/limited-company/task-list-page-company-details??serviceLine=Comply%20with%20REACH%20IT&serviceRole=REACH%20Manager&userType=new&regSuccess=success&serviceQuestions=no&numUsers=1&IV=on&IVRes=success" class="govuk-link--no-visited-state">IV success - Company Signup - Comply with REACH IT</a></li>
-        <li><a href="/new-user-reg/limited-company/task-list-page-company-details??serviceLine=Comply%20with%20REACH%20IT&serviceRole=REACH%20Manager&userType=new&regSuccess=success&serviceQuestions=no&numUsers=1&IV=on&IVRes=fail" class="govuk-link--no-visited-state">IV fail - Company Signup - Comply with REACH IT</a></li>
-        <li><a href="/new-user-reg/limited-company/task-list-page-IV-fail?IV=on" class="govuk-link--no-visited-state">IV fail page</a></li>
-        <li><a href="/new-user-reg/limited-company/task-list-page-IV-fail_alt?IV=on" class="govuk-link--no-visited-state">IV fail page alternate</a></li>
+        <li><a href="/new-user-reg/limited-company/task-list-page-company-details??serviceLine=Comply%20with%20REACH%20IT&serviceRole=REACH%20Manager&userType=new&regSuccess=success&serviceQuestions=no&numUsers=1&IV=on&IVRes=success" class="govuk-link--no-visited-state">IV Success</a></li>
+        <li><a href="/new-user-reg/limited-company/task-list-page-company-details??serviceLine=Comply%20with%20REACH%20IT&serviceRole=REACH%20Manager&userType=new&regSuccess=success&serviceQuestions=no&numUsers=1&IV=on&IVRes=fail" class="govuk-link--no-visited-state">IV Fail</a></li>
+      </ul>
+      <h3 class="govuk-heading-s">Results pages quick links</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/new-user-reg/limited-company/task-list-page-personal-details?IV=on" class="govuk-link--no-visited-state">IV Success continue page - Return to task list</a></li>
+        <li><a href="/new-user-reg/limited-company/IV-fail?IV=on" class="govuk-link--no-visited-state">IV Fail page 'Problem' page pattern</a></li>
+        <li><a href="/new-user-reg/limited-company/task-list-page-IV-fail?IV=on" class="govuk-link--no-visited-state">IV Fail page - Return to task list</a></li>
+
       </ul>
 
     <h3 class="govuk-heading-s">Security word</h3>

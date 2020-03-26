@@ -205,7 +205,7 @@ router.post('/new-user-reg/limited-company/IV', function (req, res) {
 router.post('/new-user-reg/limited-company/IVFail', function (req, res) {
   //req.session.data['personalFirstName'] = "Anne"; //backup way of setting dummy data
   //req.session.data['personalSurname'] = "Bloggs";
-    res.redirect('https://si-prototype.herokuapp.com/latest/pdv?qRand=true&cl=200&redirect=http://localhost:3000//new-user-reg/limited-company/task-list-page-IV-fail?IV=on&personalFirstName=' + req.session.data['personalFirstName'] + '&personalSurname=' + req.session.data['personalSurname'])
+    res.redirect('https://si-prototype.herokuapp.com/latest/pdv?qRand=true&cl=200&redirect=http://localhost:3000//new-user-reg/limited-company/IV-fail?IV=on&personalFirstName=' + req.session.data['personalFirstName'] + '&personalSurname=' + req.session.data['personalSurname'])
 })
 
 
