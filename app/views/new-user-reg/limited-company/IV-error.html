@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% set title = "About the organisation you represent" %}
+
+{% block header %}
+  {% include "includes/logged-out-header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{% if data['IVRes'] == "incomplete" %}
+  <div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Your identity check <br />is incomplete</h1>
+        <h2 class="govuk-heading-m">Please finish entering your details</h2>
+        <p class="govuk-body">We have saved your answers. They will be available for <b>30 days.</b></p>
+        <br />
+        <button class="govuk-button" data-module="govuk-button" onclick="window.location.href='/new-user-reg/limited-company/personal-details?IV=on'">
+            Continue
+        </button>
+        <p class="govuk-body">
+          Or <a class="govuk-link" href="/../help#contacting-defra-services" target="_blank">contact the relevant service</a> to continue the sign up process.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+{% elseif data['IVRes'] == "locked-out" %}
+  <div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">You have been locked-out</h1>
+        <h2 class="govuk-heading-m">Try again in <b>[time_period]</b></h2>
+        <p class="govuk-body">You may have entered incorrect details too many times.</p>
+        <p class="govuk-body">We saved your answers. They will be available for <b>30 days</b>.</p>
+        <p class="govuk-body">
+          Or <a class="govuk-link" href="/../help#contacting-defra-services" target="_blank">contact the relevant service</a> to continue the sign up process.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+{% else %}
+  <div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Sorry, we cannot complete your identity check right now</h1>
+        <h2 class="govuk-heading-m">Please try again later</h2>
+        <p class="govuk-body">We saved your answers. They will be available for <b>30 days</b>.</p>
+        <button class="govuk-button" data-module="govuk-button" onclick="window.location.href='/new-user-reg/limited-company/personal-details?IV=on'">
+            Try again
+        </button>
+        <p class="govuk-body">
+          Or <a class="govuk-link" href="/../help#contacting-defra-services" target="_blank">contact the relevant service</a> to continue the sign up process.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+{% endif %}
+{% endblock %}
