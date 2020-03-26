@@ -43,9 +43,15 @@
       case 'Limited company':
       form.action = '/new-user-reg/limited-company/company-lookup'
 
+      case 'Limited company':
+      form.action = '/new-user-reg/new-user-reg/company-lookup'
+
       break;
       case 'Public limited company':
       form.action = '/new-user-reg/limited-company/company-lookup'
+      break;
+      case 'Public limited company':
+      form.action = '/new-user-reg/new-user-reg/company-lookup'
       break;
 
       break;
@@ -54,6 +60,12 @@
       break;
 
       case 'Non-UK organisation':
+      break;
+      case 'Limited liability partnership':
+      form.action = '/new-user-reg/new-user-reg/company-lookup'
+      break;
+
+      case 'Non-UK organisation'
       form.action = '/new-user-reg/non-uk-org/org-name'
       break;
 
@@ -84,14 +96,17 @@
             case 'Limited company':
             form.action = '/new-user-reg/limited-company/task-list-page-account?flowType=task'
 
+            case 'Limited company':
+            form.action = '/new-user-reg/company-lookup?flowType=task'
+
             break;
             case 'Public limited company':
-            form.action = '/new-user-reg/limited-company/task-list-page-account?flowType=task'
+            form.action = '/new-user-reg/company-lookup?flowType=task'
             break;
 
             break;
             case 'Limited liability partnership':
-            form.action = '/new-user-reg/limited-company/task-list-page-account?flowType=task'
+            form.action = '/new-user-reg/company-lookup?flowType=task'
             break;
 
             case 'Non-UK organisation':
