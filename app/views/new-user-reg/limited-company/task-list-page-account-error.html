@@ -54,43 +54,49 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span>About you
+            <span class="app-task-list__section-number">2. </span>About your organisation
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="personal-details">
-                Your contact details
+              <a class="app-task-list__task-name" href="company-lookup" aria-describedby="company-details-completed">
+                Your organisation's details
               </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="company-details-completed">
+                Completed
+              </strong>
             </li>
-            <!--
-            <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="personal-sro">
-                Your level of responsibility
-              </a>
-            </li>
-          -->
           </ul>
         </li>
 
-
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span>About your organisation
+            <span class="app-task-list__section-number">3. </span>About you
           </h2>
           <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              {% if data['IV'] == "on" %}
+              <a class="app-task-list__task-name" href="personal-details" aria-describedby="personal-details-completed">
+                Your identity
+              </a>
+              {% else %}
+              <a class="app-task-list__task-name" href="personal-details" aria-describedby="personal-details-completed">
+                Your name
+              </a>
+              {% endif %}
+            </li>
             <li class="app-task-list__item govuk-form-group--error">
               <span id="error" class="govuk-error-message">
-                You must complete your organisation's details
+                You must complete your personal contact details
                 </span>
-                <a class="app-task-list__task-name" href="company-lookup">
-                Your organisation's details
+              <a class="app-task-list__task-name" href="personal-contact" aria-describedby="personal-contact-completed">
+                Your contact details
               </a>
             </li>
-          <!--  <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="company-contact">
-                Contact details
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="personal-security" aria-describedby="security-completed">
+                Your security word
               </a>
-            </li>-->
+            </li>
           </ul>
         </li>
 
