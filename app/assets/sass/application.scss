@@ -14,13 +14,13 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/task-list";
 @import "patterns/related-items";
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-@import "patterns/check-your-answers";
-@import "patterns/table-test";
-@import "patterns/card";
-@import "patterns/idm";
-@import "patterns/login-nav";
-@import "patterns/application-additions";
+@import "patterns/meta-data";
+@import "patterns/tables";
 
-//Cookie banner $govuk-global-styles
-@import "_cookies"
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.govuk-summary-list__key-wide {
+  width: 50%;
+}
